@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Brian M.A. Higgins Portfolio</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                background-color: #282828;
+                color: #ebdbb2;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav {
+                background-color: #3c3836;
+                position: sticky;
+                top: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+                z-index: 100;
+                border-bottom: 2px solid #928374;
+                box-sizing: border-box;
+            }
+
+            nav .left {
+                display: flex;
+                align-items: center;
+            }
+
+            nav .left button {
+                background-color: #98971a;
+                color: #282828;
+                padding: 8px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-right: 15px;
+            }
+
+            nav .left div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            nav .left div h1 {
+                margin: 0;
+                font-size: 1.5em;
+            }
+
+            nav .left div p {
+                margin: 0;
+                font-size: 0.8em;
+                color: #d5c4a1;
+            }
+
+            nav .right a {
+                color: #ebdbb2;
+                text-decoration: none;
+                margin-left: 20px;
+                white-space: nowrap;
+            }
+
+            section {
+                padding: 40px 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            section h2 {
+                color: #fabd2f;
+                border-bottom: 2px solid #928374;
+                padding-bottom: 10px;
+            }
+
+            .about-me div {
+                display: flex;
+                align-items: flex-start;
+            }
+
+            .about-me-content {
+                flex-direction: column;
+            }
+
+            .about-me img {
+                margin-right: 20px;
+                width: 200px;
+                height: auto;
+                border-radius: 10px;
+            }
+            .about-me h3 {
+                line-height: 1.6;
+                margin-bottom: 10px;
+                padding-bottom: 0px;
+            }
+
+            .about-me p {
+                line-height: 1.6;
+            }
+
+            .skills ul {
+                list-style-type: disc;
+                padding-left: 20px;
+            }
+
+            .skills li {
+                margin-bottom: 15px;
+            }
+
+            .projects {
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .project-card {
+                display: inline-block;
+                width: 300px;
+                background-color: #3c3836;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                padding: 15px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                vertical-align: top;
+                box-sizing: border-box;
+                height: 350px;
+                max-height: 350px;
+            }
+
+            .project-card img {
+                width: 100%;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+
+            .project-card a {
+                color: #83a598;
+                text-decoration: none;
+            }
+
+            .project-card p {
+                word-wrap: break-word;
+                text-wrap: auto;
+            }
+
+            .recommendations input,
+            .recommendations textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #928374;
+                background-color: #282828;
+                color: #ebdbb2;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            .recommendations button {
+                background-color: #98971a;
+                color: #282828;
+                padding: 8px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                display: block; /* Make it a block-level element */
+                margin: 15px auto 0; /* Center it horizontally */
+            }
+
+            /* Scrollbar styling */
+            ::-webkit-scrollbar {
+                width: 12px;
+                background-color: #3c3836;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background-color: #928374;
+                border-radius: 6px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background-color: #7c6f64;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="left">
+                <button onclick="scrollToTop()">Home</button>
+                <div>
+                    <h1>Brian M.A. Higgins</h1>
+                    <p>brianhiggins4306@gmail.com</p>
+                </div>
+            </div>
+            <div class="right">
+                <a href="#about">About Me</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#recommendations">Recommendations</a>
+            </div>
+        </nav>
+
+        <section id="about" class="about-me">
+            <h2>About Me</h2>
+            <div>
+                <img src="pfp.png" alt="Profile Picture" />
+                <div class="about-me-content">
+                    <h3>Hello, I am Brian Higgins</h3>
+                    <p>
+                        I have been developing and activily participating on the web for over half a decade! I have deployed multiple services for enterprise applications using Google Cloud services. I am a huge fan of Google's AI model, Google Gemini, and have been using it accross all fields of interest. I am a part time IT Contractor and do Web Development, Game Development, and Graphic Design as a hobby! One day I hope to pursue a role in IT full-time!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Javascript</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>AI</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <!-- King Duck Engine Entry -->
+                    <img
+                        src="./projectimg/20250314_12h17m39s_grim.png"
+                        alt="Project KDE"
+                    />
+                    <br></br>
+                    <a href="https://github.com/BasicStudio/KingDuckEngine"
+                        >Go To KingDuckEngine</a
+                    >
+                    <p>
+                        A 2d game engine/library that allows for
+                        smoother quicker development of 2d games
+                    </p>
+                </div>
+                <div class="project-card">
+                    <!-- Space Jumpo Entry -->
+                    <img src="./projectimg/space.png" alt="Project SpaceJumpo" />
+                    <br></br>
+                    <a href="https://javascriptgold.itch.io/spacejumpo">Go To SpaceJumpo</a>
+                    <p>A hard but addictive platformer game</p>
+                </div>
+                <div class="project-card">
+                    <!-- Island Power Entry -->
+                    <img src="./projectimg/island.png" alt="Island Power" />
+                    <br></br>
+                    <a href="https://javascriptgold.itch.io/islandpower">Go To Island Power</a>
+                    <p>Play as solar energy as you power the island on the power grid</p>
+                </div>
+                <div class="project-card">
+                    <!-- NPC Entry -->
+                    <img src="./projectimg/npc.png" alt="Victor NPC" />
+                    <br></br>
+                    <a href="https://javascriptgold.itch.io/victor-npc">Go To Victor NPC</a>
+                    <p>A game where you play as the npc in a massive MMO-RPG talking a set of premade characters as they venture out into the great open world while you just sit and talk..</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="recommendations" class="recommendations">
+            <h2>Recommendations</h2>
+            <input type="text" id="nameInput" placeholder="Name" />
+            <textarea id="messageInput" placeholder="Message"></textarea>
+            <button onclick="sendRecommendation()">Submit</button>
+        </section>
+
+        <script>
+            function scrollToTop() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+
+            function sendRecommendation() {
+                const name = document.getElementById("nameInput").value;
+                const message = document.getElementById("messageInput").value;
+                const subject = encodeURIComponent(name + " - Recommendation");
+                const body = encodeURIComponent(message);
+                window.location.href = `mailto:brianhiggins4306@gmail.com?subject=${subject}&body=${body}`;
+            }
+        </script>
+    </body>
+</html>
